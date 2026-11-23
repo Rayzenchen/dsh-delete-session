@@ -11,7 +11,7 @@ Adds one row to DeepSeek Harness's sidebar session menu: **Delete session**. One
 DeepSeek Harness (DSH) ships with **Archive**, but archiving only moves a session out of the sidebar: the files stay on disk, stay searchable, and keep taking space. This plugin is that missing step.
 
 - Version: **1.0.0**
-- Requires DSH **0.2.2 or newer** (web and desktop)
+- Requires DSH **0.2.2 or newer** (web and desktop; verified through 0.2.3-alpha.2)
 - A Host half and a Client half, one plain JavaScript file each — no build step, no runtime dependencies
 
 ## What it deletes, and what it leaves alone
@@ -68,7 +68,7 @@ Deletion cannot be undone, so the rule here is: **refuse rather than delete the 
 - **Fail closed on checks.** An unreadable session list or an unanswerable activity check returns `503` instead of being treated as "idle".
 - **Client-supplied paths are never trusted.** The request carries a session id only, matched against `^[A-Za-z0-9._-]{1,256}$` with `.` and `..` rejected outright. The directory is re-derived from that id using DSH's own `encodeSegment` / `projectKey` rules, then proven to sit inside the sessions root with `realpath`; symlinks are rejected.
 - **Server-side confirmation.** The body must carry `confirm: true`; a pressed button is not enough.
-- **It reuses DSH's own request trust model.** The route does not invent a second policy: it calls `connection.admit(req)` — loopback/trusted Host, `Origin == Host`, `sec-fetch-site`, signed HttpOnly cookie — and additionally requires an `x-dsh-plugin` header that a cross-site page cannot send without a preflight. Measured: an unauthenticated request returns `401`, a cross-origin one `403`, and `GET` returns `405`.
+- **It reuses DSH's own request trust model.** The route does not invent a second policy: it calls `connection.admit(req)` — loopback/trusted Host, `Origin == Host`, `sec-fetch-site`, signed HttpOnly cookie — and additionally requires an `x-dsh-plugin` header that a cross-site page cannot send without a preflight. Since 0.2.3 plugin routes also pass the web server's own authorization gate first, so both checks apply. Measured: an unauthenticated request returns `401`, a cross-origin one `403`, and `GET` returns `405`.
 - **One delete per session at a time.** Two windows deleting the same session: the second gets `409 busy`.
 
 ## Known limitations

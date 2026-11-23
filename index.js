@@ -885,6 +885,28 @@ function localFence(request) {
 }
 
 /**
+ * The `connection` service with cordis's traceable proxy stripped off, or undefined.
+ *
+ * `admit()` verifies credentials through the `connection.authentication` sub-service,
+ * and cordis's traceable proxy re-enters that sub-service on behalf of whichever fiber
+ * made the call. Since DSH 0.2.3 that turns a plain `admit()` call from a plugin into
+ * `cannot get property "connection.authentication" without inject` unless the plugin
+ * also declares the sub-service as a hard dependency. Declaring it would make the whole
+ * plugin wait for a service it never uses, and would delete the no-`connection` fallback
+ * (the local fence below) along with it, so the unwrapped implementation is called
+ * instead — the same escape already used for `sessionQuery.listSessions`. `admit()` reads
+ * only its own instance state, so it does not need the caller's context.
+ *
+ * @returns the raw service, or undefined when this profile mounts none.
+ */
+function connectionService(ctx) {
+  const service = ctx.get('connection')
+  if (service === undefined || service === null) return undefined
+  const raw = service[Symbol.for('cordis.original')]
+  return raw !== undefined && typeof raw.admit === 'function' ? raw : service
+}
+
+/**
  * Decide whether one request may delete.
  *
  * The shipped `/api` carrier already owns the deployment's request trust model
@@ -896,7 +918,7 @@ function localFence(request) {
  * @returns `null` when admitted, otherwise `{ status, message }`.
  */
 function trustRejection(ctx, request) {
-  const connection = ctx.get('connection')
+  const connection = connectionService(ctx)
   if (connection !== undefined && typeof connection.admit === 'function') {
     const admission = connection.admit(request)
     if (admission !== null && typeof admission === 'object' && 'rejection' in admission) {
