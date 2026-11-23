@@ -1,0 +1,72 @@
+{
+  "name": "@local/dsh-delete-session",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Adds a \"delete session\" row to every sidebar session menu and permanently removes the session.",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rayzenchen/dsh-delete-session.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Rayzenchen/dsh-delete-session/issues"
+  },
+  "homepage": "https://github.com/Rayzenchen/dsh-delete-session#readme",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "cordis",
+    "session",
+    "delete-session",
+    "privacy",
+    "cleanup"
+  ],
+  "meta": {
+    "title": "删除会话",
+    "description": "在侧栏每个会话的「…」菜单里增加一行「删除会话」，二次确认后永久删除该会话、它的子代理会话与缓存。"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "tools/*.mjs",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "node --check index.js && node --check client.js",
+    "test": "node tools/verify-all.mjs",
+    "test:paths": "node tools/verify-paths.mjs",
+    "test:delete": "node tools/verify-delete.mjs",
+    "test:host-filter": "node tools/verify-host-filter.mjs",
+    "test:rollback": "node tools/verify-rollback-fault.mjs",
+    "test:client-ghosts": "node tools/verify-client-ghosts.mjs",
+    "test:client-dialog": "node tools/verify-client-dialog.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^25.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}

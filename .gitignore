@@ -1,0 +1,10 @@
+# Dependencies (installed for the optional dev-only test suites)
+node_modules/
+
+# Runtime and OS noise
+.DS_Store
+*.log
+
+# Editors
+.vscode/
+.idea/

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Delete session",
+    "description": "Adds a \"Delete session\" row to every sidebar session menu; confirming it permanently removes the session, its subagent sessions and its caches."
+  }
+}

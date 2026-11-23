@@ -1,0 +1,6 @@
+# Bundle patch for @local/dsh-delete-session.
+# One Host row: the plugin registers the delete route on `webServer` and owns
+# the storage-side deletion; the package's ./client export is the Client half.
+- insert:
+    - id: dsh-delete-session
+      name: '@local/dsh-delete-session'

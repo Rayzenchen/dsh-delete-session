@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ['22', '24']
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+
+      # Only the tests need dependencies: React 18 + jsdom for the rendered
+      # Client-half suite. The plugin itself ships with no runtime dependencies.
+      - name: Install test dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Syntax check
+        run: npm run check
+
+      - name: Verification suites
+        run: npm test
