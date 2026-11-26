@@ -2,7 +2,7 @@
   "name": "@local/dsh-delete-session",
   "version": "1.0.0",
   "private": true,
-  "description": "Adds a \"delete session\" row to every sidebar session menu and permanently removes the session.",
+  "description": "Adds a Delete session row to every sidebar session menu, after the built-in Archive action. The confirmation dialog names the session and says the deletion cannot be undone; confirming it permanently removes the session's log directory, its subagent sessions, the projection cache and the workspace references, and the sidebar row disappears immediately. A session with work in flight is refused at first, and the dialog then offers Stop work and delete; a session that was only opened and is idle deletes without restarting DSH. Forked sessions and attachments are untouched, and a deletion cannot be undone. Turning the plugin off removes the row; sessions already deleted do not come back.",
   "license": "MIT",
   "type": "module",
   "repository": {
@@ -25,7 +25,7 @@
   ],
   "meta": {
     "title": "删除会话",
-    "description": "在侧栏每个会话的「…」菜单里增加一行「删除会话」，二次确认后永久删除该会话、它的子代理会话与缓存。"
+    "description": "给侧栏每个会话行的「…」菜单加一行「删除会话」，排在「归档会话」之后。确认框会写明会话名与「此操作不可撤销」，确认后永久删除该会话的日志目录、它的子代理会话、投影缓存与工作区引用，侧栏那一行立即消失。有任务在跑时先拒绝，并多给一个「停止任务并删除」；只是被打开过、当前空闲的会话可以直接删，不必重启 DSH。分叉出来的会话与附件不受影响，删除后无法恢复；停用插件后这一行菜单消失，已经删掉的会话也不会回来。"
   },
   "exports": {
     ".": "./index.js",
@@ -40,6 +40,7 @@
     "cordis.patch.yml",
     "locale/*.json",
     "icon.svg",
+    "docs",
     "tools/*.mjs",
     "README.md",
     "README.en.md",

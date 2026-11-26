@@ -128,7 +128,8 @@ dsh-delete-session-plugin/
 ├── client.js             Client half: menu row + confirmation dialog (plain JS, no build)
 ├── locale/{zh,en}.json   Title and description shown by the plugin manager
 ├── icon.svg              Plugin icon (36×36, transparent)
-├── docs/icon-preview.png The icon in light and dark themes
+├── docs/                 Plugin detail page: DETAIL.md / DETAIL.zh.md plus the
+│                         feature image preview.svg (icon-preview.png is the icon above)
 └── tools/                Six verification suites plus the verify-all runner
 ```
 

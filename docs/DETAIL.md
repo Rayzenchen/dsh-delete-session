@@ -1,0 +1,1 @@
+![A sidebar session row on the left with its … menu open, its last entry a red Delete session row with a trash icon; on the right the confirmation dialog warning that the deletion cannot be undone, with Cancel and a red Delete button](preview.svg)

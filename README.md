@@ -128,7 +128,8 @@ dsh-delete-session-plugin/
 ├── client.js             Client 半边：菜单行 + 确认对话框（纯 JS，无构建）
 ├── locale/{zh,en}.json   插件管理页的标题与说明
 ├── icon.svg              插件图标（36×36，透明底）
-├── docs/icon-preview.png 图标在明暗主题下的预览
+├── docs/                 插件详情页：DETAIL.md / DETAIL.zh.md + 特性图 preview.svg
+│                         （icon-preview.png 是上文那张图标预览）
 └── tools/                6 个验证套件 + verify-all 汇总入口
 ```
 

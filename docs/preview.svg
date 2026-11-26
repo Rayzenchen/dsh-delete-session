@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="300" viewBox="0 0 640 300" role="img" aria-label="A session menu with a red Delete session row on the left, and the confirmation dialog on the right">
+<rect x="32" y="46" width="300" height="208" rx="14" fill="#8A93A6" fill-opacity=".09" stroke="#8A93A6" stroke-opacity=".34" stroke-width="1.4"/>
+<rect x="56" y="66" width="86" height="9" rx="4.5" fill="#8A93A6" fill-opacity=".55"/>
+<rect x="48" y="90" width="268" height="30" rx="8" fill="#8A93A6" fill-opacity=".05"/>
+<rect x="62" y="99" width="12" height="10" rx="3" fill="#6B7688" fill-opacity=".38"/>
+<rect x="84" y="100" width="104" height="6" rx="3" fill="#6B7688" fill-opacity=".5"/>
+<rect x="84" y="111" width="62" height="4" rx="2" fill="#6B7688" fill-opacity=".3"/>
+<rect x="48" y="124" width="268" height="30" rx="8" fill="#8A93A6" fill-opacity=".15" stroke="#8A93A6" stroke-opacity=".34" stroke-width="1.2"/>
+<rect x="62" y="133" width="12" height="10" rx="3" fill="#6B7688" fill-opacity=".5"/>
+<rect x="84" y="134" width="92" height="6" rx="3" fill="#6B7688" fill-opacity=".55"/>
+<rect x="84" y="145" width="48" height="4" rx="2" fill="#6B7688" fill-opacity=".32"/>
+<circle cx="296" cy="139" r="1.9" fill="#6B7688" fill-opacity=".62"/>
+<circle cx="303" cy="139" r="1.9" fill="#6B7688" fill-opacity=".62"/>
+<circle cx="310" cy="139" r="1.9" fill="#6B7688" fill-opacity=".62"/>
+<rect x="202" y="150" width="120" height="80" rx="9" fill="#8A93A6" fill-opacity=".2" stroke="#8A93A6" stroke-opacity=".42" stroke-width="1.3"/>
+<rect x="216" y="164" width="11" height="9" rx="2.5" fill="#6B7688" fill-opacity=".45"/>
+<rect x="236" y="165" width="62" height="6" rx="3" fill="#6B7688" fill-opacity=".5"/>
+<path d="M214 186H310" fill="none" stroke="#8A93A6" stroke-opacity=".38" stroke-width="1.2" stroke-linecap="round"/>
+<rect x="208" y="192" width="108" height="26" rx="6" fill="#EF4444" fill-opacity=".14"/>
+<path d="M223 201.5h13" fill="none" stroke="#EF4444" stroke-width="1.7" stroke-linecap="round"/>
+<path d="M226.6 201.5v-1.4c0-.5.4-.9.9-.9h2.8c.5 0 .9.4.9.9v1.4" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M224.4 201.5l.8 8.4c.06.7.64 1.2 1.34 1.2h4.7c.7 0 1.28-.5 1.34-1.2l.8-8.4" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="243" y="201.5" width="62" height="6" rx="3" fill="#EF4444" fill-opacity=".9"/>
+<path d="M344 150H374" stroke="#EF4444" stroke-width="3" stroke-linecap="round" stroke-opacity=".9"/>
+<path d="M367 141.5L376 150L367 158.5" fill="none" stroke="#EF4444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".9"/>
+<rect x="392" y="46" width="216" height="208" rx="14" fill="#8A93A6" fill-opacity=".09" stroke="#8A93A6" stroke-opacity=".34" stroke-width="1.4"/>
+<rect x="410" y="70" width="92" height="9" rx="4.5" fill="#6B7688" fill-opacity=".55"/>
+<path d="M578 69L588 79" fill="none" stroke="#6B7688" stroke-width="1.8" stroke-linecap="round" stroke-opacity=".55"/>
+<path d="M588 69L578 79" fill="none" stroke="#6B7688" stroke-width="1.8" stroke-linecap="round" stroke-opacity=".55"/>
+<rect x="410" y="94" width="178" height="6" rx="3" fill="#6B7688" fill-opacity=".42"/>
+<rect x="410" y="106" width="132" height="6" rx="3" fill="#6B7688" fill-opacity=".42"/>
+<path d="M411.5 130.5L418 143h-13z" fill="none" stroke="#EF4444" stroke-width="1.7" stroke-linejoin="round"/>
+<path d="M411.5 134.5v3.6" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round"/>
+<rect x="428" y="134.5" width="150" height="6" rx="3" fill="#EF4444" fill-opacity=".55"/>
+<rect x="450" y="190" width="58" height="26" rx="7" fill="none" stroke="#8A93A6" stroke-opacity=".5" stroke-width="1.4"/>
+<rect x="463" y="200.5" width="32" height="5" rx="2.5" fill="#6B7688" fill-opacity=".5"/>
+<rect x="516" y="190" width="76" height="26" rx="7" fill="#EF4444" fill-opacity=".9"/>
+<rect x="532" y="200.5" width="44" height="5" rx="2.5" fill="#FFFFFF" fill-opacity=".85"/>
+</svg>

@@ -1,6 +1,7 @@
 {
   "meta": {
     "title": "Delete session",
-    "description": "Adds a \"Delete session\" row to every sidebar session menu; confirming it permanently removes the session, its subagent sessions and its caches."
+    "description": "Adds a Delete session row to every sidebar session menu, after the built-in Archive action. The confirmation dialog names the session and says the deletion cannot be undone; confirming it permanently removes the session's log directory, its subagent sessions, the projection cache and the workspace references, and the sidebar row disappears immediately. A session with work in flight is refused at first, and the dialog then offers Stop work and delete; a session that was only opened and is idle deletes without restarting DSH. Forked sessions and attachments are untouched, and a deletion cannot be undone. Turning the plugin off removes the row; sessions already deleted do not come back.",
+    "detail": "docs/DETAIL.md"
   }
 }
